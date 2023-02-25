@@ -9,13 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+
+            Color(.black)
+                .ignoresSafeArea()
+
+            VStack {
+                Image("Linux-Avatar")
+                    .resizable()
+                    .cornerRadius(15)
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.all)
+                Text("Linux Avatar")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+            }
         }
-        .padding()
     }
 }
 
